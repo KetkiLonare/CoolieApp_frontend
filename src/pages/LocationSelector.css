@@ -1,0 +1,70 @@
+/* --- LocationSelector Styles --- */
+.icon-small {
+    width: 20px;
+    height: 20px;
+}
+
+.location-selector .form-label {
+    font-weight: 500;
+    color: #333;
+}
+
+.location-selector .form-control,
+.location-selector .form-select {
+    border-radius: 0.5rem;
+    border: 1px solid #ced4da;
+    padding: 0.55rem 0.75rem;
+    font-size: 0.95rem;
+    transition: all 0.2s;
+}
+
+.location-selector .form-control:focus,
+.location-selector .form-select:focus {
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+    border-color: #007bff;
+}
+
+.location-selector input:disabled,
+.location-selector select:disabled {
+    background-color: #e9ecef;
+    cursor: not-allowed;
+}
+
+@media (max-width: 576px) {
+    .location-selector .input-group {
+        flex-direction: column;
+    }
+
+    .location-selector .input-group-text {
+        border-radius: 0.5rem 0.5rem 0 0;
+        width: 100%;
+    }
+
+    .location-selector .form-control,
+    .location-selector .form-select {
+        border-radius: 0 0 0.5rem 0.5rem;
+        width: 100%;
+    }
+}
+
+.tricolor-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: linear-gradient(to bottom,
+            #ff9933 0%,
+            /* Saffron */
+            #ffffff 50%,
+            /* White */
+            #138808 100%
+            /* Green */
+        );
+}
+
+.tricolor-icon .icon-small {
+    width: 18px;
+    height: 18px;
+}

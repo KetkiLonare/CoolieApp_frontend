@@ -1,0 +1,29 @@
+.swipe-hint {
+    position: fixed;
+    top: 50%;
+    font-size: 2rem;
+    color: #00ffff;
+    opacity: 0.5;
+    pointer-events: none;
+    z-index: 1000;
+}
+
+.swipe-hint.left {
+    left: 10px;
+}
+
+.swipe-hint.right {
+    right: 10px;
+}
+
+.hover-scale:hover {
+    transform: scale(1.03);
+    transition: all 0.25s ease-in-out;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    transition: all 0.25s ease-in-out;
+}
+
+v

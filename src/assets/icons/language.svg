@@ -1,0 +1,13 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background circle -->
+  <circle cx="32" cy="32" r="28" fill="#FF9933"></circle>
+
+  <!-- Letter A -->
+  <text x="20" y="38" font-family="Poppins, sans-serif" font-size="24" font-weight="bold" fill="#007bff">A</text>
+
+  <!-- Letter あ (Japanese) -->
+  <text x="36" y="38" font-family="Poppins, sans-serif" font-size="24" font-weight="bold" fill="#00c853">あ</text>
+
+  <!-- Horizontal line -->
+  <line x1="12" y1="46" x2="52" y2="46" stroke="#FFFFFF" stroke-width="2"></line>
+</svg>

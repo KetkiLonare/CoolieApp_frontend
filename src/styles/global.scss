@@ -1,0 +1,276 @@
+// @import './variables';
+// @import './mixins';
+
+// * {
+//   box-sizing: border-box
+// }
+
+// html,
+// body,
+// #root {
+//   height: 100%
+// }
+
+// body {
+//   font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto;
+//   margin: 0;
+//   background: #f5f7fb;
+//   color: #1a1a1a
+// }
+
+// .container {
+//   @include container();
+// }
+
+// .nav-header {
+//   background: linear-gradient(180deg, $brand-orange, $brand-dark);
+//   padding: 12px 0;
+//   color: #fff;
+
+//   .nav-inner {
+//     display: flex;
+//     align-items: center;
+//     justify-content: space-between
+//   }
+
+//   .brand {
+//     display: flex;
+//     align-items: center;
+//     gap: 10px;
+
+//     .logo-img {
+//       height: 36px
+//     }
+
+//     .brand-text {
+//       font-weight: 700
+//     }
+//   }
+
+//   .nav-links a {
+//     color: #fff;
+//     margin-left: 12px;
+//     text-decoration: none;
+//     opacity: 0.9
+//   }
+
+//   .nav-links a.active {
+//     text-decoration: underline
+//   }
+// }
+
+// .site-footer {
+//   padding: 16px 0;
+//   text-align: center;
+//   color: $muted;
+//   margin-top: 30px
+// }
+
+// .app-main {
+//   padding: 24px 0
+// }
+
+// .page h1 {
+//   margin-bottom: 12px
+// }
+
+// /* phone mockup to match figma-like screens */
+// .phone-mockup {
+//   display: flex;
+//   justify-content: center;
+//   margin-top: 12px;
+// }
+
+// .phone-mockup .screen {
+//   width: $phone-width;
+//   background: linear-gradient(180deg, #ffffff, #fff);
+//   border-radius: 28px;
+//   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.12);
+//   padding: 18px;
+//   border: 8px solid #e9eef7;
+// }
+
+// .screen-header {
+//   text-align: left;
+//   padding-bottom: 8px;
+
+//   h2 {
+//     margin: 0;
+//     font-size: 18px
+//   }
+// }
+
+// .book-card {
+//   background: #fff;
+//   border-radius: 16px;
+//   padding: 14px;
+//   box-shadow: 0 6px 16px rgba(15, 23, 42, 0.06)
+// }
+
+// .lbl {
+//   display: block;
+//   font-size: 13px;
+//   color: $muted;
+//   margin-bottom: 6px
+// }
+
+// .inp {
+//   width: 100%;
+//   padding: 10px;
+//   border-radius: 10px;
+//   border: 1px solid #e8eef7;
+//   margin-bottom: 10px;
+//   font-size: 14px
+// }
+
+// .row {
+//   display: flex;
+//   gap: 10px
+// }
+
+// .col {
+//   flex: 1
+// }
+
+// .helper-card {
+//   display: flex;
+//   align-items: center;
+//   gap: 12px;
+//   background: #fbfbfe;
+//   padding: 10px;
+//   border-radius: 12px;
+//   margin-top: 10px
+// }
+
+// .helper-img {
+//   width: 56px;
+//   height: 56px;
+//   border-radius: 50%;
+//   background: #ddd
+// }
+
+// .helper-info .name {
+//   font-weight: 600
+// }
+
+// .helper-info .meta {
+//   font-size: 12px;
+//   color: $muted
+// }
+
+// .btn-primary {
+//   width: 100%;
+//   padding: 12px;
+//   border-radius: 12px;
+//   border: none;
+//   background: $brand-dark;
+//   color: #fff;
+//   font-weight: 700;
+//   margin-top: 12px
+// }
+
+// .translator-card textarea {
+//   width: 100%;
+//   min-height: 120px;
+//   margin-bottom: 8px;
+//   padding: 10px;
+//   border-radius: 8px;
+//   border: 1px solid #e8eef7
+// }
+
+// .booking-card {
+//   display: flex;
+//   justify-content: space-between;
+//   align-items: center;
+//   padding: 12px;
+//   border-radius: 10px;
+//   background: #fff;
+//   margin-bottom: 10px
+// }
+
+// .status {
+//   text-transform: capitalize;
+//   font-weight: 700
+// }
+
+// .grid {
+//   display: grid;
+//   grid-template-columns: 1fr;
+//   gap: 12px
+// }
+
+// .place-card {
+//   background: #fff;
+//   border-radius: 12px;
+//   overflow: hidden
+// }
+
+// .place-card .img {
+//   height: 140px;
+//   background: #e9eef7
+// }
+
+// .cards {
+//   display: flex;
+//   gap: 12px;
+//   flex-wrap: wrap
+// }
+
+// .stat {
+//   flex: 1;
+//   background: #fff;
+//   padding: 12px;
+//   border-radius: 12px
+// }
+
+// @media(min-width:$mobile-break) {
+//   .grid {
+//     grid-template-columns: repeat(3, 1fr)
+//   }
+
+//   .phone-mockup .screen {
+//     width: 420px
+//   }
+// }
+
+
+
+// :root {
+//   --primary-color: #ff6b6b;
+//   /* Red */
+//   --secondary-color: #4ecdc4;
+//   /* Teal */
+//   --accent-color: #ffe66d;
+//   /* Yellow */
+//   --bg-color: #f0f2f5;
+//   --transition-speed: 0.3s;
+// }
+
+// body {
+//   margin: 0;
+//   font-family: 'Poppins', sans-serif;
+//   background: var(--bg-color);
+//   color: #333;
+// }
+
+// /* Moving gradient background for mobile-app feel */
+// .gradient-bg {
+//   background: linear-gradient(135deg, var(--primary-color), var(--secondary-color), var(--accent-color));
+//   background-size: 400% 400%;
+//   animation: gradientSlide 15s ease infinite;
+//   border-radius: 12px;
+// }
+
+// @keyframes gradientSlide {
+//   0% {
+//     background-position: 0% 50%;
+//   }
+
+//   50% {
+//     background-position: 100% 50%;
+//   }
+
+//   100% {
+//     background-position: 0% 50%;
+//   }
+// }

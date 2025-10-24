@@ -1,0 +1,188 @@
+/* -----------------------------
+   Translator Container
+------------------------------ */
+.translator-bg {
+    background: linear-gradient(to right, #f7f9fc, #e3ebf7);
+    min-height: 100vh;
+    padding: 4vh 2vw;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #222;
+}
+
+/* -----------------------------
+   Card Styling
+------------------------------ */
+.translator-card {
+    max-width: 900px;
+    margin: 0 auto;
+    background: #fff;
+    border-radius: 1.5vw;
+    box-shadow: 0 0.5vw 2vw rgba(0, 0, 0, 0.1);
+    padding: 2vw 2vw 3vw 2vw;
+}
+
+/* -----------------------------
+   Header
+------------------------------ */
+.translator-card h2 {
+    text-align: center;
+    font-weight: 700;
+    font-size: 2.5vw;
+    margin-bottom: 2vh;
+    color: #1e3c72;
+}
+
+/* -----------------------------
+   Language Select Row
+------------------------------ */
+.language-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1vw;
+    margin-bottom: 2vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.language-select {
+    flex: 1 1 40%;
+    min-width: 40vw;
+    font-size: 1.5vw;
+    padding: 1vh 1vw;
+    border-radius: 1vw;
+    border: 1px solid #ccc;
+    background-color: #fefefe;
+    color: #222;
+}
+
+.swap-btn {
+    flex: 0 0 auto;
+    width: 6vw;
+    min-width: 40px;
+    height: 6vw;
+    min-height: 40px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5vw;
+    margin: 0 1vw;
+    border: none;
+    background: linear-gradient(90deg, #ff8c42, #ff3c42);
+    color: #fff;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.swap-btn:hover {
+    transform: rotate(180deg);
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2);
+}
+
+/* -----------------------------
+   Textarea Input
+------------------------------ */
+textarea {
+    width: 100%;
+    font-size: 1.3vw;
+    padding: 1vw;
+    border-radius: 1vw;
+    border: 1px solid #ccc;
+    min-height: 12vh;
+    resize: none;
+    color: #222;
+}
+
+/* -----------------------------
+   Translate Button
+------------------------------ */
+.btn-tri {
+    background: linear-gradient(90deg, #1e3c72, #2a5298);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.5vw;
+    border-radius: 1vw;
+    padding: 1vh 3vw;
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-tri:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 0.5vw 1vw rgba(0, 0, 0, 0.2);
+}
+
+/* -----------------------------
+   Translated Text Card
+------------------------------ */
+.translated-card {
+    position: relative;
+    padding: 1.5vw;
+    background-color: #f1f5f9;
+    border-radius: 1vw;
+    font-size: 1.3vw;
+    margin-top: 2vh;
+    word-wrap: break-word;
+}
+
+.copy-btn {
+    position: absolute;
+    top: 0.8vw;
+    right: 0.8vw;
+    border: none;
+    background: #1e3c72;
+    color: #fff;
+    padding: 0.5vw;
+    border-radius: 50%;
+    font-size: 1.2vw;
+    cursor: pointer;
+    transition: background 0.2s ease;
+}
+
+.copy-btn:hover {
+    background: #2a5298;
+}
+
+/* -----------------------------
+   Mobile Responsive
+------------------------------ */
+@media (max-width: 768px) {
+    .translator-card h2 {
+        font-size: 5vw;
+    }
+
+    .language-select {
+        flex: 1 1 100%;
+        font-size: 3vw;
+        padding: 1.5vh 1vw;
+    }
+
+    .swap-btn {
+        width: 12vw;
+        height: 12vw;
+        font-size: 4vw;
+        margin: 1vh 0;
+    }
+
+    textarea {
+        font-size: 3vw;
+        min-height: 15vh;
+    }
+
+    .btn-tri {
+        font-size: 3vw;
+        padding: 1.5vh 4vw;
+        border-radius: 2vw;
+    }
+
+    .translated-card {
+        font-size: 3vw;
+        padding: 3vw;
+    }
+
+    .copy-btn {
+        font-size: 3vw;
+        top: 2vw;
+        right: 2vw;
+    }
+}

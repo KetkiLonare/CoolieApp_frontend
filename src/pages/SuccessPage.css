@@ -1,0 +1,63 @@
+.success-page {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #a0e9ff 0%, #e6f7ff 100%);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    overflow: hidden;
+}
+
+.success-page::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('https://www.transparenttextures.com/patterns/cubes.png');
+    opacity: 0.08;
+    pointer-events: none;
+}
+
+.success-card {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 1rem;
+    text-align: left;
+}
+
+.success-card .card-img-top {
+    object-fit: cover;
+    height: 200px;
+    border-radius: 0.5rem;
+}
+
+.btn-tri {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 50px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn-tri:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Mobile adjustments */
+@media (max-width: 576px) {
+    .success-card {
+        max-width: 95%;
+    }
+
+    .btn-tri {
+        width: 100%;
+        padding: 0.75rem;
+    }
+}

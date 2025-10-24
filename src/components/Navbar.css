@@ -1,0 +1,102 @@
+/* ===== Navbar (Desktop) ===== */
+.custom-navbar {
+    background: linear-gradient(90deg, #ff9933, #ffffff, #138808);
+    padding: 0.4rem 0 !important;
+    /* reduce vertical height */
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 1030;
+}
+
+.navbar-logo {
+    height: 38px;
+    width: 38px;
+    border-radius: 50%;
+    object-fit: contain;
+}
+
+.navbar-brand span {
+    font-size: 1.1rem;
+}
+
+.nav-link-item {
+    font-size: 0.95rem;
+    padding: 0.3rem 0.8rem !important;
+    transition: all 0.2s ease-in-out;
+}
+
+.nav-link-item:hover {
+    color: #003366 !important;
+    text-shadow: 0 0 5px rgba(255, 255, 255, 0.6);
+}
+
+.nav-link-item.active {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 12px;
+}
+
+/* ===== Mobile Bottom Navbar ===== */
+.mobile-bottom-nav {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(90deg, #ff9933, #ffffff, #138808);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 60px;
+    box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1050;
+}
+
+.bottom-nav-link {
+    color: #333;
+    text-decoration: none;
+    text-align: center;
+    font-size: 0.8rem;
+    flex: 1;
+}
+
+.bottom-nav-link .icon {
+    font-size: 1.3rem;
+    display: block;
+}
+
+.bottom-nav-link.active {
+    color: #004d00;
+    font-weight: bold;
+}
+
+.layout {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    background: #000;
+    /* fallback */
+}
+
+.layout-canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.layout-content {
+    position: relative;
+    z-index: 2;
+    padding: 30px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .layout-content {
+        padding: 15px;
+    }
+}

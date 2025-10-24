@@ -1,0 +1,98 @@
+.bookservice-bg {
+  min-height: 100vh;
+  background: url('../assets/images/vikasit-bharat-bg.jpg') no-repeat center center/cover;
+  position: relative;
+  padding: 20px 10px;
+}
+
+.vikasit-bharat-bg {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.tricolor-particles {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.particle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: linear-gradient(to bottom, #ff9933, #ffffff, #138808);
+  animation: float 5s linear infinite;
+  top: calc(var(--i) * 2%);
+  left: calc(var(--i) * 2%);
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+    opacity: 0.8;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+
+  100% {
+    transform: translateY(-100px);
+    opacity: 0;
+  }
+}
+
+.booking-card {
+  z-index: 1;
+  border-radius: 15px;
+}
+
+.text-gradient {
+  background: linear-gradient(90deg, #ff9933, #138808);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hint-logo {
+  max-width: 120px;
+  height: auto;
+}
+
+.icon-small {
+  width: 20px;
+  height: 20px;
+}
+
+.booking-form .form-group {
+  width: 100%;
+}
+
+.btn-tri {
+  background: linear-gradient(90deg, #ff9933, #138808);
+  border: none;
+}
+
+@media (max-width: 768px) {
+  .booking-card {
+    padding: 20px;
+  }
+
+  .booking-form .row {
+    flex-direction: column;
+  }
+
+  .booking-form .col-md-6 {
+    max-width: 100% !important;
+  }
+
+  .hint-logo {
+    max-width: 100px;
+  }
+
+  .btn-tri {
+    width: 100%;
+  }
+}

@@ -1,0 +1,45 @@
+.layout {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  background: linear-gradient(180deg, #ff9933 0%, #ffffff 50%, #128807 100%);
+}
+
+/* Animation / Canvas Layer */
+.layout-canvas {
+  position: fixed;
+  /* change absolute → fixed for full viewport coverage */
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 0;
+  /* make sure content is above */
+  pointer-events: none;
+  /* allow clicks through */
+}
+
+/* Content above animation */
+.layout-content {
+  position: relative;
+  z-index: 1;
+  /* content above animation */
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .layout-content {
+    padding: 15px;
+  }
+
+  .layout-canvas {
+    width: 100vw;
+    height: 100vh;
+  }
+}
