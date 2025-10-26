@@ -25,7 +25,7 @@ export default function MyBookings() {
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const res = await axios.get("http://127.0.0.1:8000/bookings");
+        const res = await axios.get("https://coolieapp-backend.onrender.com/bookings");
         setBookings(res.data?.bookings);
         setLoading(false);
       } catch (err: any) {

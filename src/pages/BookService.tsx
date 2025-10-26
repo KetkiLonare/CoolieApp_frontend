@@ -27,7 +27,7 @@
 //     setError("");
 
 //     try {
-//       const res = await axios.post("http://127.0.0.1:8000/book", {
+//       const res = await axios.post("https://coolieapp-backend.onrender.com/book", {
 //         state: form.state,
 //         name: form.passenger,
 //         city: form.city,
@@ -174,6 +174,7 @@ const BookService: React.FC = () => {
     state: "",
     city: "",
   });
+  const apiUrl = import.meta.env.VITE_API_URL;
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
 
@@ -183,7 +184,9 @@ const BookService: React.FC = () => {
     setError("");
 
     try {
-      const res = await axios.post("http://127.0.0.1:8000/book", {
+
+
+      const res = await axios.post(`${VITE_API}/book`, {
         state: form.state,
         name: form.passenger,
         city: form.city,

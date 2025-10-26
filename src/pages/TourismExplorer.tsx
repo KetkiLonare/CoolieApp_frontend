@@ -44,7 +44,7 @@ export default function TourismExplorer() {
     e.preventDefault();
     setLoading(true);
     try {
-      const res = await axios.post("http://127.0.0.1:8000/book", {
+      const res = await axios.post("https://coolieapp-backend.onrender.com/book", {
         name: form.passenger,
         city: form.city,
         luggage_weight: parseFloat(form.luggage_weight),

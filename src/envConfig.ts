@@ -1,0 +1,1 @@
+export const { VITE_APP_SECRET_KEY }: any = import.meta.env;
