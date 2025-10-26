@@ -179,14 +179,13 @@ const BookService: React.FC = () => {
   const [error, setError] = useState("");
 
   const handleSubmit = async (e: React.FormEvent) => {
+    debugger;
     e.preventDefault();
     setLoading(true);
     setError("");
 
     try {
-
-
-      const res = await axios.post(`${VITE_API}/book`, {
+      const res = await axios.post(`https://coolieapp.netlify.app/book`, {
         state: form.state,
         name: form.passenger,
         city: form.city,
