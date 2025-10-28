@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import passengerIcon from "../assets/icons/passenger.svg";
 import luggageIcon from "../assets/icons/luggage.svg";
 import serviceIcon from "../assets/icons/service.svg";
-import travelHint from "../assets/images/travel-hint.jpg";
+import travelHint from "../assets/images/coolie.png";
 import axios from "axios";
 import "./BookService.css";
 import { LocalBackend } from "../api/localbackend";
