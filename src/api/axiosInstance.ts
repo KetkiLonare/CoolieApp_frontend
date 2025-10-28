@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Create a reusable Axios instance
 const api = axios.create({
-  baseURL: "https://coolieapp-backend.onrender.com", // Replace with actual base API
+  baseURL: "https://coolieg.onrender.com", // Replace with actual base API
   timeout: 10000,
 });
 

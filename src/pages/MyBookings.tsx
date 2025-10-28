@@ -9,6 +9,7 @@ import mumbaiImg from "../assets/images/mumbai.jpg";
 import delhiImg from "../assets/images/delhi.jpg";
 import bengaluruImg from "../assets/images/bengaluru.jpg";
 import placeholderImg from "../assets/images/placeholder.png";
+import { LocalBackend } from "../api/localbackend";
 
 export default function MyBookings() {
   const [bookings, setBookings] = useState<any[]>([]);
@@ -21,21 +22,22 @@ export default function MyBookings() {
     "New Delhi": delhiImg,
     Bengaluru: bengaluruImg,
   };
-
   useEffect(() => {
     const fetchBookings = async () => {
       try {
-        const res = await axios.get("https://coolieapp-backend.onrender.com/bookings");
-        setBookings(res.data?.bookings);
-        setLoading(false);
-      } catch (err: any) {
-        setError(err.response?.data?.detail || "Failed to fetch bookings");
+        const res = await axios.get("https://coolieg.onrender.com/bookings");
+        setBookings(res.data?.bookings || []);
+      } catch (err) {
+        console.warn("API down, loading from local fallback...");
+        const res = await LocalBackend.getBookings();
+        setBookings(res.bookings);
+        setError("Showing local stored bookings (API unreachable)");
+      } finally {
         setLoading(false);
       }
     };
     fetchBookings();
   }, []);
-
   const handleViewDetails = (booking: any) => {
     navigate("/success", { state: booking });
   };

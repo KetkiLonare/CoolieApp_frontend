@@ -1,0 +1,14 @@
+[
+    {
+        "name": "John Doe",
+        "country": "India",
+        "state": "Maharashtra",
+        "city": "Mumbai",
+        "luggage_weight": 20,
+        "arrival_time": "2025-10-28T10:00",
+        "service_type": "Premium",
+        "helper": "Assigned Helper MU",
+        "fare": 80,
+        "timestamp": "2025-10-28T10:05:00Z"
+    }
+]

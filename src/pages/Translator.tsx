@@ -15,7 +15,7 @@ export default function Translator() {
     if (!text.trim()) return;
     setLoading(true);
     try {
-      const response = await fetch("https://coolieapp-backend.onrender.com/translate", {
+      const response = await fetch("https://coolieg.onrender.com/translate", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text, source: sourceLang, target: targetLang }),
